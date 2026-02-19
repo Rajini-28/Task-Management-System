@@ -93,10 +93,6 @@ footer {
   border-radius: 50%;
   cursor: pointer;
 }
-
-.chatbox {
-  display: none;
-  position: fixed;
   bottom: 70px;
   right: 20px;
   width: 300px;
