@@ -84,3 +84,37 @@ document.querySelector('.admin-panel button').addEventListener('click', () => {
   document.querySelector('.admin-panel input[type="date"]').value = '';
   document.querySelector('.admin-panel select').value = 'low';
 });
+<script>
+function toggleChat() {
+  let chat = document.getElementById("chatBox");
+  chat.style.display = chat.style.display === "block" ? "none" : "block";
+}
+
+function sendMessage() {
+  let input = document.getElementById("userInput").value.toLowerCase();
+  let messages = document.getElementById("chatMessages");
+
+  messages.innerHTML += "<p><b>You:</b> " + input + "</p>";
+
+  let reply = "I answer only task management related questions.";
+
+  if (input.includes("add task")) {
+    reply = "To add a task, enter task name, select priority and click 'Add Task'.";
+  }
+  else if (input.includes("delete")) {
+    reply = "Click the red 'Delete' button to remove a task.";
+  }
+  else if (input.includes("complete")) {
+    reply = "Click the green 'Mark as Complete' button.";
+  }
+  else if (input.includes("priority")) {
+    reply = "You can choose Low, Medium or High priority while adding task.";
+  }
+  else if (input.includes("task")) {
+    reply = "You can add, delete, and mark tasks as complete in this system.";
+  }
+
+  messages.innerHTML += "<p><b>Bot:</b> " + reply + "</p>";
+  document.getElementById("userInput").value = "";
+}
+</script>
