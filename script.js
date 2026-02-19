@@ -117,4 +117,12 @@ function sendMessage() {
   messages.innerHTML += "<p><b>Bot:</b> " + reply + "</p>";
   document.getElementById("userInput").value = "";
 }
+function toggleChat() {
+    let chat = document.getElementById("chatBox");
+    if (chat.style.display === "flex") {
+        chat.style.display = "none";
+    } else {
+        chat.style.display = "flex";
+    }
+}
 </script>
