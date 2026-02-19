@@ -106,6 +106,20 @@ footer {
   font-weight: bold;
   margin-bottom: 5px;
 }
+.chat-container {
+    display: none;   /* KEEP ONLY THIS */
+    position: fixed;
+    bottom: 90px;
+    right: 25px;
+    width: 320px;
+    height: 420px;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    flex-direction: column;
+    overflow: hidden;
+}
 
 .chat-messages {
   height: 180px;
